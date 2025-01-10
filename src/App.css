@@ -1,73 +1,3 @@
-/* CSS Reset */
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-}
-
-* {
-	margin: 0;
-}
-
-body {
-	line-height: 1.5;
-	-webkit-font-smoothing: antialiased;
-	background-color: rgb(67, 67, 67);
-}
-
-img,
-picture,
-video,
-canvas,
-svg {
-	display: block;
-	max-width: 100%;
-}
-
-input,
-button,
-textarea,
-select {
-	font: inherit;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	overflow-wrap: break-word;
-	margin-bottom: 2rem;
-	text-align: center;
-}
-
-p {
-	text-wrap: pretty;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	text-wrap: balance;
-	color: #98cbff;
-}
-
-#root,
-#__next {
-	isolation: isolate;
-}
-
-#root {
-	max-width: 1280px;
-	margin: 0 auto;
-	padding: 2rem;
-}
-
 /* Book List Styles */
 .books-list {
 	list-style: none;
@@ -153,6 +83,7 @@ h6 {
 	border-radius: 4px;
 	min-width: 300px;
 	background-color: rgb(67, 67, 67);
+	color: white;
 }
 
 .search-container input:focus {
@@ -220,11 +151,13 @@ h6 {
 .description {
 	text-align: justify;
 	margin-bottom: 2rem;
+	color: white;
 }
 
 .metadata {
 	display: grid;
 	gap: 0.5rem;
+	color: white;
 }
 
 .metadata p {

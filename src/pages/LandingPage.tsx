@@ -9,6 +9,7 @@ const LandingPage = () => {
 		new URLSearchParams(useLocation().search).get("search") || ""
 	);
 
+	//This function finds the three latest books to select them for display on the landing page
 	const latestBooks = [...booksData.books]
 		.sort(
 			(a, b) =>
@@ -16,6 +17,7 @@ const LandingPage = () => {
 		)
 		.slice(0, 3);
 
+	//This function filters the books based on the search term
 	const searchResults = searchTerm
 		? booksData.books.filter(
 				(book) =>
@@ -24,10 +26,13 @@ const LandingPage = () => {
 		  )
 		: [];
 
+	//This function handles the search input
 	const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
 		setSearchTerm(event.target.value);
 	};
 
+	//This function handles the search form submission
+	//React Router wasn't allowing the search term to be persistent in the URL so I had to use this workaround
 	const handleSubmit = (event: React.FormEvent) => {
 		event.preventDefault();
 		window.history.pushState({}, "", `/?search=${searchTerm}`);
