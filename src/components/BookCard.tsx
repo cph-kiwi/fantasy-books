@@ -9,6 +9,8 @@ interface BookCardProps {
 const BookCard = ({ book }: BookCardProps) => {
 	const navigate = useNavigate();
 
+	//The whole card is clickable, to take a user to the Details Page.
+
 	return (
 		<li
 			className="book-card"

@@ -10,6 +10,8 @@ const DetailsPage = () => {
 		return <div>Book not found</div>;
 	}
 
+	//When a user clicks "Back", I want them to return to the page they were previously on.
+
 	return (
 		<div className="details-page">
 			<Link

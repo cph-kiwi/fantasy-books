@@ -4,6 +4,7 @@ import BookCard from "../components/BookCard.tsx";
 import booksData from "../assets/fantasy-books.json";
 
 const BooksPage = () => {
+	//This function sorts the books by date added, to display the latest books first
 	const sortedBooks = [...booksData.books].sort(
 		(a, b) => new Date(b.dateAdded).getTime() - new Date(a.dateAdded).getTime()
 	);
